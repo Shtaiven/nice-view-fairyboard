@@ -11,6 +11,13 @@ This is a base repo to help anyone get started creating their own images/animati
 > [!NOTE]
 > When you have created your own display, consider adding it to [this collection](https://github.com/whoop-t/nice-shield-collection) I started for nice!view displays!
 
+## Create locally within your own zmk config
+If you would like, you can add/create shields directly to your zmk config rather than host on github. I prefer hosting so that you can share more easily with others.
+
+That said, all you need to do is copy the directory `board/shields/nice_shield_base` from this repo directly into you zmk config directory `board/shields`
+
+You can skip the steps of cloning the repo and just alter the newly copied files in you zmk config instead of hosting and pushing to github.
+
 ## Prerequisite
 1. Have [git](https://git-scm.com/) installed
 2. Have a Github account
