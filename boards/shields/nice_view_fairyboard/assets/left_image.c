@@ -145,5 +145,5 @@ const lv_img_dsc_t left_image_2 = {
     .header.w = 80,
     .header.h = 69,
     .data_size = 620,
-    .data = left_image_map,
+    .data = left_image_2_map,
 };
