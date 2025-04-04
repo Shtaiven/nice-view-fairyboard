@@ -1,0 +1,8 @@
+file_format: "1"
+id: nice-view-fairyboard
+name: nice!view_fairyboard
+type: shield
+url: https://github.com/Shtaiven/nice-view-fairyboard
+requires: [nice_view_header]
+features:
+  - display

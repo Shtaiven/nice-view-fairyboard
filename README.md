@@ -1,61 +1,12 @@
-# nice-shield-base
+# nice-view-fairyboard
 
-This is a base repo to help anyone get started creating their own images/animations for their nice!view. This guides focus is just changing the main image and leaving extras like bluetooth, battery, etc alone. Of course all these are changeable, but getting the repo set up and changing the main image is a good first step in customizing it more.
+Created for use with the [fairyboard](https://github.com/Shtaiven/shockboard?tab=readme-ov-file#fairyboard) with its [ZMK config](https://github.com/Shtaiven/shockboard-zmk-config).
+
+Modified from [whoop-t/nice-shield-base](https://github.com/whoop-t/nice-shield-base).
 
 > [!IMPORTANT]
 > This repo is only for nice!views and zmk with zephyr modules. This will NOT work for OLED/qmk setups.
 > Since this is a zephyr module, the shield repo is hosted on github and can be used by anyone.
->
-> If you would like OLED/qmk examples, check out my collection of OLED displays for qmk [HERE](https://github.com/whoop-t/qmk-oled-collection)
-
-> [!NOTE]
-> When you have created your own display, consider adding it to [this collection](https://github.com/whoop-t/nice-shield-collection) I started for nice!view displays!
-
-## Create locally within your own zmk config
-If you would like, you can add/create shields directly to your zmk config rather than host on github. I prefer hosting so that you can share more easily with others.
-
-That said, all you need to do is copy the directory `board/shields/nice_shield_base` from this repo directly into you zmk config directory `board/shields`
-
-You can skip the steps of cloning the repo and just alter the newly copied files in you zmk config instead of hosting and pushing to github.
-
-## Prerequisite
-1. Have [git](https://git-scm.com/) installed
-2. Have a Github account
-3. A board with nice!views
-4. ZMK setup and you are able to flash your board 
-
-## Clone the repo
-
-> [!NOTE]
-> A convention I like to do is to name the repo/module starting with `nice` to signify that this is a nice!view module.
-> e.g if I was creating displays with star art, I'd name it something like `nice-star-display` or something similar.
-
-### Clone the repo(RECOMMENDED)
-```
-git clone git@github.com:whoop-t/nice-shield-base.git your-repo-name
-```
-The above will clone the base repo into a folder of your choice. This should match the repo name you are going to create on github
-
-2. Create new repo on github
-
-On you github, create a new repo with the same name as your folder you cloned too
-
-3. Set your locally cloned repo remote to the new repo you created on github
-
-You need to attach your local clone to the remote repo, do this by running the command below
-> [!NOTE]
-> You can get the url by using the Code button on your repo on github 
-```
-git remote set-url origin git@github.com:YOUR-USER/your-repo-name.git
-```
-
-You can verify that it is pointing to the remote repo with `git remote -v`
-
-4. Push the local files up to the remote repo
-```
-git push
-```
-Now you should see all the base files in your repo on github
 
 ## Renaming
 
@@ -201,18 +152,3 @@ Replace the bytes with your bytes from the conversion
 Save the file
 
 Thats it! Repeat for your other side if needed
-
-## Push the code to you github remote repo
-
-Once you have done all the changes you want, push the code to your remote github repo
-```
-git add .
-git commit -m "Your commit message"
-git push
-```
-
-Then you just need to adjust your ZMK config to use the module like in the above step(if you havent done so already) and flash your board!
-
-## Issues
-
-If you have issues, raise an issue on github and I will try to help out when I have time. This will also help me tweak the guide with anything I may have missed.
