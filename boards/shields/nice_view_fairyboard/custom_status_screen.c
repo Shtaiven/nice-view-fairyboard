@@ -3,7 +3,7 @@
 #include <zephyr/logging/log.h>
 LOG_MODULE_DECLARE(zmk, CONFIG_ZMK_LOG_LEVEL);
 
-#include "assets/pixel_operator_mono.c"
+#include "assets/zelda_dx_tt_brk.c"
 #include "assets/custom_fonts.h"
 
 #if IS_ENABLED(CONFIG_NICE_VIEW_WIDGET_STATUS)
