@@ -6,7 +6,7 @@ LV_IMG_DECLARE(bolt);
 
 static void draw_level(lv_obj_t *canvas, const struct status_state *state) {
     lv_draw_label_dsc_t label_right_dsc;
-    init_label_dsc(&label_right_dsc, LVGL_FOREGROUND, &zelda_dx_tt_brk, LV_TEXT_ALIGN_RIGHT);
+    init_label_dsc(&label_right_dsc, LVGL_FOREGROUND, &zelda_dx, LV_TEXT_ALIGN_RIGHT);
 
     char text[10] = {};
 
@@ -18,7 +18,7 @@ static void draw_charging_level(lv_obj_t *canvas, const struct status_state *sta
     lv_draw_img_dsc_t img_dsc;
     lv_draw_img_dsc_init(&img_dsc);
     lv_draw_label_dsc_t label_right_dsc;
-    init_label_dsc(&label_right_dsc, LVGL_FOREGROUND, &zelda_dx_tt_brk, LV_TEXT_ALIGN_RIGHT);
+    init_label_dsc(&label_right_dsc, LVGL_FOREGROUND, &zelda_dx, LV_TEXT_ALIGN_RIGHT);
 
     char text[10] = {};
 
@@ -29,7 +29,7 @@ static void draw_charging_level(lv_obj_t *canvas, const struct status_state *sta
 
 void draw_battery_status(lv_obj_t *canvas, const struct status_state *state) {
     lv_draw_label_dsc_t label_left_dsc;
-    init_label_dsc(&label_left_dsc, LVGL_FOREGROUND, &zelda_dx_tt_brk, LV_TEXT_ALIGN_LEFT);
+    init_label_dsc(&label_left_dsc, LVGL_FOREGROUND, &zelda_dx, LV_TEXT_ALIGN_LEFT);
     lv_canvas_draw_text(canvas, 0, 19, 25, &label_left_dsc, "BAT");
 
     if (state->charging) {
