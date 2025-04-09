@@ -3,6 +3,6 @@
 
 LV_FONT_DECLARE(pixel_operator_mono);
 LV_FONT_DECLARE(zelda_dx);
-LV_FONT_DECLARE(zelda_dx_tt_brk);
+LV_FONT_DECLARE(zelda_oracles);
 
 #endif

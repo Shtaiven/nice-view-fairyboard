@@ -4,7 +4,7 @@
 
 void draw_layer_status(lv_obj_t *canvas, const struct status_state *state) {
     lv_draw_label_dsc_t label_dsc;
-    init_label_dsc(&label_dsc, LVGL_FOREGROUND, &zelda_dx, LV_TEXT_ALIGN_CENTER);
+    init_label_dsc(&label_dsc, LVGL_FOREGROUND, &zelda_oracles, LV_TEXT_ALIGN_CENTER);
 
     char text[10] = {};
 
