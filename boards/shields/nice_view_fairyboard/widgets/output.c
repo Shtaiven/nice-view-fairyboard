@@ -37,6 +37,16 @@ static void draw_ble_connected(lv_obj_t *canvas) {
     lv_canvas_draw_img(canvas, 49, 0, &bt, &img_dsc);
 }
 
+static void draw_profile_index(lv_obj_t *canvas, int idx) {
+    lv_draw_label_dsc_t label_dsc;
+    init_label_dsc(&label_dsc, LVGL_FOREGROUND, &zelda_oracles, LV_TEXT_ALIGN_RIGHT);
+
+    char text[10] = {};
+    sprintf(text, "%i", idx+1);
+
+    lv_canvas_draw_text(canvas, 26, 1, 16, &label_dsc, text);
+}
+
 void draw_output_status(lv_obj_t *canvas, const struct status_state *state) {
     lv_draw_label_dsc_t label_dsc;
     init_label_dsc(&label_dsc, LVGL_FOREGROUND, &zelda_oracles, LV_TEXT_ALIGN_LEFT);
@@ -53,6 +63,7 @@ void draw_output_status(lv_obj_t *canvas, const struct status_state *state) {
         break;
 
     case ZMK_TRANSPORT_BLE:
+        draw_profile_index(canvas, state->active_profile_index);
         if (state->active_profile_bonded) {
             if (state->active_profile_connected) {
                 draw_ble_connected(canvas);
