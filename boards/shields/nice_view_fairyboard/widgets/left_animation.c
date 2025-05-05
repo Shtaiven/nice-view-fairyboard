@@ -25,5 +25,5 @@ void draw_left_animation(lv_obj_t *canvas) {
     lv_img_set_src(art, &left_image);
 #endif
 
-    lv_obj_align(art, LV_ALIGN_TOP_LEFT, 36, 0);
+    lv_obj_align(art, LV_ALIGN_TOP_LEFT, 56, 0);
 }
